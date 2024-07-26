@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="8090" shutdown="SHUTDOWN">
+ --><Server port="8092" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/><Context docBase="ch06_oracle_JDBC" path="/ch06_oracle_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:ch06_oracle_JDBC"/></Host>
+      <Context docBase="ch00_test" path="/ch00_test" reloadable="true" source="org.eclipse.jst.jee.server:ch00_test"/></Host>
     </Engine>
   </Service>
 </Server>
